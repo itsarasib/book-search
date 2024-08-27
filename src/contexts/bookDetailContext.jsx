@@ -1,6 +1,6 @@
 import React, { useState, createContext } from "react";
 import axios from "axios";
-import bookCoverNotFound from "/bookCoverNotFound.jpg";
+// import bookCoverNotFound from "/bookCoverNotFound.jpg";
 
 const BookDetailContext = createContext();
 
@@ -31,7 +31,8 @@ const BookDetailProvider = ({ children }) => {
           description: description ? description.value : "No description found",
           cover: covers
             ? `https://covers.openlibrary.org/b/id/${covers[0]}-L.jpg`
-            : bookCoverNotFound,
+            : // : bookCoverNotFound,
+              "https://via.placeholder.com/200x300",
           subject_places: subject_places
             ? subject_places.join(", ")
             : "No subject places found",

@@ -15,7 +15,7 @@ const Header = () => {
       <div
         className={` flex flex-col justify-center ${
           isHomePage ? "min-h-screen" : "min-h-[520px]"
-        } bg-[url('header-bg.png')] bg-no-repeat bg-cover bg-center opacity-80 `}
+        } bg-[url('src/assets/headerBg.png')] bg-no-repeat bg-cover bg-center opacity-80 `}
       >
         <div className="container flex flex-col items-center gap-4 md:container md:mx-auto">
           <h2 className="text-white text-6xl">Find Your Book.</h2>

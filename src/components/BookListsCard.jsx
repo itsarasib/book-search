@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import bookCoverNotFound from "/bookCoverNotFound.jpg";
+import bookCoverNotFound from "@/assets/bookCoverNotfound.jpg";
 
 const BookListsCard = ({ book }) => {
   const navigate = useNavigate();

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import bookCoverNotFound from "/bookCoverNotFound.jpg";
+// import bookCoverNotFound from "../image/book-cover-not-found.jpg";
 import { useNavigate } from "react-router-dom";
 import Loader from "./Loader";
 
@@ -30,7 +30,7 @@ const FavBooksCard = () => {
             title: data.title,
             cover: data.covers
               ? `https://covers.openlibrary.org/b/id/${data.covers[0]}-L.jpg`
-              : bookCoverNotFound,
+              : "https://via.placeholder.com/200x300",
           };
         } catch (error) {
           console.log(error);
