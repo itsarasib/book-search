@@ -13,11 +13,19 @@ const Header = () => {
     <>
       <Navbar />
       <div
-        className={` flex flex-col justify-center ${
+        className={`relative flex flex-col justify-center ${
           isHomePage ? "min-h-screen" : "min-h-[520px]"
-        } bg-[url('src/assets/headerBg.png')] bg-no-repeat bg-cover bg-center opacity-80 `}
+        } opacity-80`}
       >
-        <div className="container flex flex-col items-center gap-4 md:container md:mx-auto">
+        {/* Background Image */}
+        <img
+          src="src/assets/headerBg.png"
+          alt="Header Background"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        {/* Content overlay */}
+        <div className="relative z-10 container flex flex-col items-center gap-4 md:container md:mx-auto">
           <h2 className="text-white text-6xl">Find Your Book.</h2>
           <p className="text-white text-xl opacity-80">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
@@ -27,6 +35,9 @@ const Header = () => {
           </p>
           <SearchForm />
         </div>
+
+        {/* Optional background overlay */}
+        <div className="absolute inset-0 bg-black opacity-50"></div>
       </div>
     </>
   );
